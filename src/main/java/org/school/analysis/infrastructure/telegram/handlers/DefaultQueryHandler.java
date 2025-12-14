@@ -68,7 +68,7 @@ public class DefaultQueryHandler implements  QueryHandler {
         }
     }
 
-    private void executeExpenditureQueryAsync(Long chatId, SchoolTelegramBot bot) {
+    public void executeExpenditureQueryAsync(Long chatId, SchoolTelegramBot bot) {
         bot.sendText(chatId, "Запрос 1: Средние расходы\n\nВыполняю запрос. Это может занять несколько секунд");
 
         CompletableFuture.runAsync(() -> {
@@ -92,7 +92,7 @@ public class DefaultQueryHandler implements  QueryHandler {
         });
     }
 
-    private void executeMathSchoolsQueryAsync(Long chatId, SchoolTelegramBot bot) {
+    public void executeMathSchoolsQueryAsync(Long chatId, SchoolTelegramBot bot) {
         bot.sendText(chatId, "Запрос 2: Лучшие школы по математике\n\nВыполняю запрос");
 
         CompletableFuture.runAsync(() -> {
@@ -116,7 +116,7 @@ public class DefaultQueryHandler implements  QueryHandler {
         });
     }
 
-    private void executeStudentStatsQueryAsync(Long chatId, SchoolTelegramBot bot) {
+    public void executeStudentStatsQueryAsync(Long chatId, SchoolTelegramBot bot) {
         bot.sendText(chatId, "Запрос 3: Статистика студентов по странам\n\nПолучаю данные");
 
         CompletableFuture.runAsync(() -> {
@@ -159,7 +159,7 @@ public class DefaultQueryHandler implements  QueryHandler {
         });
     }
 
-    private void executeAllQueriesAsync(Long chatId, SchoolTelegramBot bot) {
+    public void executeAllQueriesAsync(Long chatId, SchoolTelegramBot bot) {
         bot.sendText(chatId, "Все запросы\n\nЗапускаю параллельное выполнение всех запросов");
 
         CompletableFuture<Void> expenditureQuery = CompletableFuture.runAsync(() -> {

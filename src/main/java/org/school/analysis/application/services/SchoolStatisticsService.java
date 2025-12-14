@@ -20,6 +20,17 @@ public class SchoolStatisticsService {
 
     public SchoolStatisticsService(SchoolRepository repository, TelegramOutputService telegramOutputService,
                                    DatabaseExceptionHandler exceptionHandler) {
+        // Добавляем проверки на null
+        if (repository == null) {
+            throw new NullPointerException("SchoolRepository cannot be null");
+        }
+        if (telegramOutputService == null) {
+            throw new NullPointerException("TelegramOutputService cannot be null");
+        }
+        if (exceptionHandler == null) {
+            throw new NullPointerException("DatabaseExceptionHandler cannot be null");
+        }
+
         this.repository = repository;
         this.telegramOutputService = telegramOutputService;
         this.exceptionHandler = exceptionHandler;

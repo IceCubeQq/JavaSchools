@@ -35,7 +35,7 @@ public class CsvSchoolParser implements CsvParser {
         return schools;
     }
 
-    private School parseLine(String line) {
+    public School parseLine(String line) {
         try {
             String[] values = parseCsvLine(line);
             School school = new School();
@@ -61,7 +61,7 @@ public class CsvSchoolParser implements CsvParser {
         }
     }
 
-    private String[] parseCsvLine(String line) {
+    public String[] parseCsvLine(String line) {
         List<String> values = new ArrayList<>();
         StringBuilder current = new StringBuilder();
         boolean inQuotes = false;
@@ -80,7 +80,7 @@ public class CsvSchoolParser implements CsvParser {
         return values.toArray(new String[0]);
     }
 
-    private Integer parseInt(String value) {
+    public Integer parseInt(String value) {
         if (value == null || value.trim().isEmpty()) {
             return null;
         }
@@ -92,7 +92,7 @@ public class CsvSchoolParser implements CsvParser {
         }
     }
 
-    private Double parseDouble(String value) {
+    public Double parseDouble(String value) {
         if (value == null || value.trim().isEmpty()) {
             return null;
         }

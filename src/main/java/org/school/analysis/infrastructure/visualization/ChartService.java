@@ -148,7 +148,7 @@ public class ChartService {
         chart.getTitle().setFont(new Font("Arial", Font.BOLD, 16));
     }
 
-    private byte[] chartToBytes(JFreeChart chart, int width, int height) throws IOException {
+    public byte[] chartToBytes(JFreeChart chart, int width, int height) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ChartUtils.writeChartAsPNG(baos, chart, width, height);
         return baos.toByteArray();
