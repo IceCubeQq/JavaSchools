@@ -1,7 +1,7 @@
 package org.school.analysis;
 
 import org.school.analysis.di.DependencyContainer;
-import org.school.analysis.infrastructure.telegram.bot.SchoolTelegramBot;
+import org.school.analysis.presentation.telegram.bot.SchoolTelegramBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;

@@ -13,11 +13,10 @@ import org.school.analysis.application.ports.output.DatabaseStatisticsPort;
 import org.school.analysis.application.ports.output.SchoolRepository;
 import org.school.analysis.application.services.SchoolStatisticsService;
 import org.school.analysis.di.DependencyContainer;
-import org.school.analysis.infrastructure.database.DatabaseManager;
+import org.school.analysis.application.ports.output.DatabaseManager;
 import org.school.analysis.infrastructure.database.DatabaseManagerImpl;
-import org.school.analysis.infrastructure.telegram.bot.SchoolTelegramBot;
-import org.school.analysis.infrastructure.telegram.handlers.*;
-import org.school.analysis.infrastructure.telegram.util.ThreadPoolManager;
+import org.school.analysis.presentation.telegram.bot.SchoolTelegramBot;
+import org.school.analysis.presentation.telegram.util.ThreadPoolManager;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;

@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.school.analysis.infrastructure.telegram.bot.SchoolTelegramBot;
-import org.school.analysis.infrastructure.telegram.handlers.DefaultCommandHandler;
+import org.school.analysis.presentation.telegram.bot.SchoolTelegramBot;
+import org.school.analysis.presentation.telegram.handlers.DefaultCommandHandler;
 
 import static junit.framework.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.*;

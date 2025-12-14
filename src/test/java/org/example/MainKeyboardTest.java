@@ -1,7 +1,7 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
-import org.school.analysis.infrastructure.telegram.keyboards.MainKeyboard;
+import org.school.analysis.presentation.telegram.keyboards.MainKeyboard;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 

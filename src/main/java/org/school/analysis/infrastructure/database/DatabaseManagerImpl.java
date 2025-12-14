@@ -1,5 +1,6 @@
 package org.school.analysis.infrastructure.database;
 
+import org.school.analysis.application.ports.output.DatabaseManager;
 import org.school.analysis.domain.model.School;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,9 +36,6 @@ public class DatabaseManagerImpl implements DatabaseManager {
                 "CREATE TABLE IF NOT EXISTS schools (id INTEGER PRIMARY KEY, district_id INTEGER, name TEXT NOT NULL, " +
                         "county_id INTEGER, grades TEXT, students INTEGER, teachers REAL, FOREIGN KEY (district_id) REFERENCES districts(id), " +
                         "FOREIGN KEY (county_id) REFERENCES counties(id))",
-
-                "CREATE TABLE IF NOT EXISTS school_technology (id INTEGER PRIMARY KEY AUTOINCREMENT, school_id INTEGER UNIQUE, " +
-                        "computers INTEGER, computer_student_ratio REAL, FOREIGN KEY (school_id) REFERENCES schools(id))",
 
                 "CREATE TABLE IF NOT EXISTS school_financials (id INTEGER PRIMARY KEY AUTOINCREMENT, school_id INTEGER UNIQUE, " +
                         "calworks REAL, lunch REAL, expenditure REAL, income REAL, fiscal_year DATE DEFAULT CURRENT_DATE, " +
@@ -116,7 +114,6 @@ public class DatabaseManagerImpl implements DatabaseManager {
         }
     }
 
-    // Приватные методы для вставки данных (остаются без изменений)
     private void insertCounties(List<School> schools) throws SQLException {
         String insertCountySQL = "INSERT OR IGNORE INTO counties (name) VALUES (?)";
 

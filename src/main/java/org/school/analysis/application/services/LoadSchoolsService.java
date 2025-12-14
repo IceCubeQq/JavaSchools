@@ -3,7 +3,7 @@ package org.school.analysis.application.services;
 import org.school.analysis.application.ports.input.LoadSchoolsUseCase;
 import org.school.analysis.domain.model.School;
 import org.school.analysis.infrastructure.csv.CsvSchoolParser;
-import org.school.analysis.infrastructure.database.DatabaseManager;
+import org.school.analysis.application.ports.output.DatabaseManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

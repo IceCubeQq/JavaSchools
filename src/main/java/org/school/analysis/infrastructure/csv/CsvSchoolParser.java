@@ -1,7 +1,7 @@
 package org.school.analysis.infrastructure.csv;
 
 import org.school.analysis.domain.model.School;
-import org.school.analysis.parser.CsvParser;
+import org.school.analysis.application.ports.input.CsvParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

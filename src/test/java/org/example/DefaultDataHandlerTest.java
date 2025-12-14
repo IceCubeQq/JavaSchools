@@ -7,12 +7,11 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.school.analysis.application.ports.input.LoadSchoolsUseCase;
 import org.school.analysis.application.ports.output.DatabaseStatisticsPort;
-import org.school.analysis.infrastructure.telegram.bot.SchoolTelegramBot;
-import org.school.analysis.infrastructure.telegram.handlers.DefaultDataHandler;
+import org.school.analysis.presentation.telegram.bot.SchoolTelegramBot;
+import org.school.analysis.presentation.telegram.handlers.DefaultDataHandler;
 import org.slf4j.Logger;
 
 import java.io.FileInputStream;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 

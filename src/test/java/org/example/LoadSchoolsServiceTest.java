@@ -8,7 +8,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.school.analysis.application.services.LoadSchoolsService;
 import org.school.analysis.domain.model.School;
 import org.school.analysis.infrastructure.csv.CsvSchoolParser;
-import org.school.analysis.infrastructure.database.DatabaseManager;
+import org.school.analysis.application.ports.output.DatabaseManager;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

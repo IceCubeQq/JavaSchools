@@ -1,7 +1,7 @@
 package org.example;
 
 import org.junit.jupiter.api.*;
-import org.school.analysis.infrastructure.telegram.util.ThreadPoolManager;
+import org.school.analysis.presentation.telegram.util.ThreadPoolManager;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;

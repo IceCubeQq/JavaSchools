@@ -6,9 +6,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.school.analysis.application.ports.output.ChartGenerator;
-import org.school.analysis.infrastructure.telegram.bot.SchoolTelegramBot;
-import org.school.analysis.infrastructure.telegram.handlers.DefaultChartHandler;
-import org.school.analysis.infrastructure.telegram.util.MessageSender;
+import org.school.analysis.presentation.telegram.bot.SchoolTelegramBot;
+import org.school.analysis.presentation.telegram.handlers.DefaultChartHandler;
+import org.school.analysis.presentation.telegram.util.MessageSender;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
