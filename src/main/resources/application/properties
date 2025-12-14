@@ -1,0 +1,12 @@
+database.url=jdbc:sqlite:schools.db
+
+csv.file.path=data/schools.csv
+
+logging.level.org.school.analysis=DEBUG
+
+telegram.bot.token=8595034167:AAG2JtC4xmFdj3JsVqHYVnKvaB8oxidgHuo
+telegram.bot.username=JavaSchoolRTFBot
+
+csv.file.path=data/schools.csv
+
+charts.output.dir=charts/
