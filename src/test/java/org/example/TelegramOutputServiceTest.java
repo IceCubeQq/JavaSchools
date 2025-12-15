@@ -1,13 +1,12 @@
 package org.example;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.school.analysis.domain.dto.CountryStudentStats;
 import org.school.analysis.domain.dto.ExpenditureStats;
 import org.school.analysis.domain.dto.MathSchoolStats;
-import org.school.analysis.presentation.TelegramOutputService;
+import org.school.analysis.presentation.telegram.util.TelegramOutputService;
 
 import java.util.ArrayList;
 import java.util.List;

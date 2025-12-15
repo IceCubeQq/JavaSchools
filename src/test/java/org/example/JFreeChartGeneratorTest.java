@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.school.analysis.application.exception.RepositoryException;
 import org.school.analysis.infrastructure.adapters.JFreeChartGenerator;
-import org.school.analysis.infrastructure.visualization.ChartService;
+import org.school.analysis.infrastructure.visualization.ChartManager;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -17,7 +17,7 @@ class JFreeChartGeneratorTest {
     private JFreeChartGenerator chartGenerator;
 
     @Mock
-    private ChartService chartService;
+    private ChartManager chartService;
 
     @BeforeEach
     void setUp() {

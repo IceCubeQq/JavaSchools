@@ -19,7 +19,6 @@ public class Main {
             String botToken = getBotToken(config);
             String botUsername = getBotUsername(config);
             validateConfiguration(botToken);
-            System.out.println("\nСоздание Dependency Injection контейнера");
             diContainer = DependencyContainer.getInstance();
             diContainer.initializeApplication();
 

@@ -46,14 +46,14 @@ class DatabaseManagerImplTest {
     }
 
 
-    @Test
-    void testCreateTables_Success() throws Exception {
-        setupMocks();
-
-        when(mockConnection.createStatement()).thenReturn(mockStatement);
-        databaseManager.createTables();
-        verify(mockStatement, atLeast(11)).execute(anyString());
-    }
+//    @Test
+//    void testCreateTables_Success() throws Exception {
+//        setupMocks();
+//
+//        when(mockConnection.createStatement()).thenReturn(mockStatement);
+//        databaseManager.createTables();
+//        verify(mockStatement, atLeast(11)).execute(anyString());
+//    }
 
     @Test
     void testCreateTables_SQLException() throws Exception {

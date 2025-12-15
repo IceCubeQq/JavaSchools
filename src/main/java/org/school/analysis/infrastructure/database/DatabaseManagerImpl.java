@@ -107,10 +107,10 @@ public class DatabaseManagerImpl implements DatabaseManager {
         try {
             if (connection != null && !connection.isClosed()) {
                 connection.close();
-                logger.info("✅ Соединение с базой данных закрыто");
+                logger.info("Соединение с базой данных закрыто");
             }
         } catch (SQLException e) {
-            logger.error("❌ Ошибка при закрытии соединения", e);
+            logger.error("Ошибка при закрытии соединения", e);
         }
     }
 

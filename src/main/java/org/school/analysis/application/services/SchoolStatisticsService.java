@@ -1,18 +1,19 @@
 package org.school.analysis.application.services;
 
+import org.school.analysis.application.ports.input.SchoolStatisticsUseCase;
 import org.school.analysis.application.ports.output.SchoolRepository;
 import org.school.analysis.application.exception.DatabaseExceptionHandler;
 import org.school.analysis.domain.dto.CountryStudentStats;
 import org.school.analysis.domain.dto.ExpenditureStats;
 import org.school.analysis.domain.dto.MathSchoolStats;
-import org.school.analysis.presentation.TelegramOutputService;
+import org.school.analysis.presentation.telegram.util.TelegramOutputService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class SchoolStatisticsService {
+public class SchoolStatisticsService implements SchoolStatisticsUseCase {
     private static final Logger logger = LoggerFactory.getLogger(SchoolStatisticsService.class);
     private final SchoolRepository repository;
     private final TelegramOutputService telegramOutputService;
@@ -20,7 +21,6 @@ public class SchoolStatisticsService {
 
     public SchoolStatisticsService(SchoolRepository repository, TelegramOutputService telegramOutputService,
                                    DatabaseExceptionHandler exceptionHandler) {
-        // Добавляем проверки на null
         if (repository == null) {
             throw new NullPointerException("SchoolRepository cannot be null");
         }

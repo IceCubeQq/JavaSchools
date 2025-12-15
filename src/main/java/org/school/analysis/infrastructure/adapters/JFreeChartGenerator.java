@@ -2,13 +2,13 @@ package org.school.analysis.infrastructure.adapters;
 
 import org.school.analysis.application.exception.RepositoryException;
 import org.school.analysis.application.ports.output.ChartGenerator;
-import org.school.analysis.infrastructure.visualization.ChartService;
+import org.school.analysis.infrastructure.visualization.ChartManager;
 
 public class JFreeChartGenerator implements ChartGenerator {
-    private final ChartService chartService;
+    private final ChartManager chartService;
 
-    public JFreeChartGenerator(ChartService chartService) {
-        this.chartService = chartService;
+    public JFreeChartGenerator(ChartManager chartManager) {
+        this.chartService = chartManager;
     }
 
     @Override

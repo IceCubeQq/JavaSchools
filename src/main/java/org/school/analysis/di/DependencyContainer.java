@@ -22,8 +22,8 @@ import org.school.analysis.presentation.telegram.handlers.DefaultCommandHandler;
 import org.school.analysis.presentation.telegram.handlers.DefaultDataHandler;
 import org.school.analysis.presentation.telegram.handlers.DefaultQueryHandler;
 import org.school.analysis.presentation.telegram.util.ThreadPoolManager;
-import org.school.analysis.infrastructure.visualization.ChartService;
-import org.school.analysis.presentation.TelegramOutputService;
+import org.school.analysis.infrastructure.visualization.ChartManager;
+import org.school.analysis.presentation.telegram.util.TelegramOutputService;
 
 import java.sql.Connection;
 import java.util.concurrent.ExecutorService;
@@ -192,7 +192,7 @@ public class DependencyContainer {
         if (repository == null) {
             throw new IllegalStateException("Репозиторий должен быть создан перед созданием ChartGenerator");
         }
-        ChartService chartService = new ChartService(repository);
+        ChartManager chartService = new ChartManager(repository);
         return new JFreeChartGenerator(chartService);
     }
 

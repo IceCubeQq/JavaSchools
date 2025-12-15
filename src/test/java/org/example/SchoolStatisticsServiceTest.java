@@ -12,7 +12,7 @@ import org.school.analysis.application.services.SchoolStatisticsService;
 import org.school.analysis.domain.dto.CountryStudentStats;
 import org.school.analysis.domain.dto.ExpenditureStats;
 import org.school.analysis.domain.dto.MathSchoolStats;
-import org.school.analysis.presentation.TelegramOutputService;
+import org.school.analysis.presentation.telegram.util.TelegramOutputService;
 
 import java.util.Arrays;
 import java.util.Collections;
